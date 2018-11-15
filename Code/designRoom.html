@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Design Room</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+  <link rel="stylesheet" type="text/css" href="css/designRoom.css">
+  <link rel="stylesheet" type="text/css" href="css/status-device.css">
+  <script src="js/designRoom.js"></script>
+  
+  
+</head>
+<body class="bg">
+    <nav class="menubar navbar sticky-top navbar-expand-sm navbar-dark menubar">
+        <a class="navbar-brand" href="index.html">SmartHome</a>
+        <ul class="navbar-nav ml-auto text-white">
+            <li class="nav-item">
+                <input id="mySearch" type="text" placeholder="Search..." style="height:35px"/>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Log out</a>
+            </li>
+        </ul>
+    </nav>
+    <br><br><br>
+    <!-- <br><br><br> -->
+<div>
+
+        <!-- <td><input type='hiddent' class='idLight"+createCount+"' style='width:40px; border:0; background-color:#e6e6e6;' readonly></td>
+        <td>
+            <input class="nameLight" id="nameLight" type="text" name="nameLight"/>&nbsp;
+        </td>
+        <td id='first'>
+            <select name="onoffLight" id="onoffLight" style="width: 80px;">
+            <option value="Off" selected>Off</option>
+            <option value="On">On</option>
+            </select>
+        </td >
+        <td id='second'>
+            <select name="bright" id="bright" style="width: 80px;">
+            <option value="Level 1 - High brightness" selected>Level 1 - High brightness</option>
+            <option value="Level 2 - Television viewing mode">Level 2 - Television viewing mode</option>
+            <option value="Level 3 - Lamp">Level 3 - Lamp</option>
+            </select>
+        </td>
+        <td id='third'>
+            <select name="colorpicker-fontawesome" id="light-color" style="width: 120px;">
+            <option value="Yellow" selected>Yellow</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+            <option value="White">White</option>
+            <option value="Orange">Orange</option>
+            </select>
+        </td>
+        <td id='forth'>
+        <div id="timepicker" class="input-append">
+            <input type="checkbox" id="timerCheck" class="timerCheck" name="timerCheck"/>
+            <input type="text" style="width: auto" id="timepicker" class="timepicker" name="timepicker"/>
+        </div>
+        </td>
+        <td>
+            <a href='#' class='update'><h5>Update</h5></a>
+        </td>
+        <td>
+            <a href='#' class='saveLight'><h5>Save</h5></a>
+        </td> -->
+
+
+
+    <div class="container col-lg-12">
+        <h2>Devices Table</h2>
+        <p>Please add some devices into this table</p>
+        <!-- Table Devices -->
+        
+        <table class="table table-striped table-bordered table-device">
+            <thead>
+            <tr>
+                <th class="device-id collumn">ID</th>
+                <th class="device-name collumn">Device name</th>
+                <th class="device-serial collumn">Serial</th>
+                <th class="device-type collumn">Type</th>
+                <th class="device-status collumn">Status</th>
+                <th class="device-adjust collumn"></th>
+                <th class="device-delete collumn"></th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-css addDevice" data-toggle="modal" data-target="#add">ADD</button>
+        <button type="button" class="btn btn-css saveroom">Save Changes</button>
+                
+        <!-- Modal add devices -->
+        <div class="modal modalAdd" id="add" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Add device</h4>
+                    <button type="reset" class="btn btn-danger btn-reset" data-toggle="tooltip" title="Reset Form">Reset</button>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+            
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <!-- <script>
+                        $(document).ready(function(){
+                            
+                        });
+                    </script>
+                    <script src="js/designRoom.js"></script> -->
+                    <form class="form">
+                    <input type="checkbox" id="defaultCheck" name="light"/>
+                    <label for="defaultCheck" class="nameDevice">Light</label><br>
+                    <input class="enterlight enternumberLight number" id="number" type="text" name="numberLight" placeholder="-- Enter the number of device --"/>
+                    <br><hr>
+                    <input type="checkbox" id="defaultCheck" name="door"/>
+                    <label for="defaultCheck" class="nameDevice">Door</label><br>
+                    <input class="enterdoor enternumberDoor number" id="number" type="text" name="numberDoor" placeholder="-- Enter the number of devices --"/>
+                    <br><hr>
+                    <input type="checkbox" id="defaultCheck" name="fan"/>
+                    <label for="defaultCheck" class="nameDevice">Fan</label><br>
+                    <input class="enterfan enternumberFan number" id="number" type="text" name="numberFan" placeholder="-- Enter the number of devices --"/>
+                    <br><hr>
+                    <input type="checkbox" id="defaultCheck" name="fridge"/>
+                    <label for="defaultCheck" class="nameDevice">Fridge</label><br>
+                    <input class="enterfridge enternumberFridge number" id="number" type="text" name="numberFridge" placeholder="-- Enter the number of devices --"/>
+                    <br><hr>
+                    <input type="checkbox" id="defaultCheck" name="wash"/>
+                    <label for="defaultCheck" class="nameDevice">Washing machine</label><br>
+                    <input class="enterwash enternumberWash number" id="number" type="text" name="numberWash" placeholder="-- Enter the number of devices --"/>
+                    <br><hr>
+                    <input type="checkbox" id="defaultCheck" name="heaters"/>
+                    <label for="defaultCheck" class="nameDevice">Heaters</label><br>
+                    <input class="enterheaters enternumberHeaters number" id="number" type="text" name="numberHeaters" placeholder="-- Enter the number of devices --"/>
+                    <br><hr>
+                    <input type="checkbox" id="defaultCheck" name="air"/>
+                    <label for="defaultCheck" class="nameDevice">Air conditional</label><br>
+                    <input class="enterair enternumberAir number" id="number" type="text" name="numberAir" placeholder="-- Enter the number of devices --"/>
+                    <br><hr>
+                    <input type="checkbox" id="defaultCheck" name="cooker"/>
+                    <label for="defaultCheck" class="nameDevice">Cooker</label><br>
+                    <input class="entercooker enternumberCooker number" id="number" type="text" name="numberCooker" placeholder="-- Enter the number of devices --"/>
+                    <br>
+                    <!-- <input type="checkbox" id="defaultCheck" name="socket">
+                    <label for="defaultCheck" class="nameDevice">Smart socket</label><br>
+                    <input class="entersocket enternumberSocket number" type="text" name="numberSocket" placeholder="-- Enter the number of devices --">
+                    <br><hr>
+                    <input type="checkbox" id="defaultCheck" name="switch">
+                    <label for="defaultCheck" class="nameDevice">Smart switch</label><br>
+                    <input class="enterswitch enternumberSwitch number" type="text" name="numberSwitch" placeholder="-- Enter the number of devices --">
+                    <br><br> -->
+                    </form>
+                </div>
+            
+                <!-- Modal footer -->
+                <div class="modal-footer" style="height:60px;">
+                    <!-- <button type="reset" class="btn btn-danger btn-reset">Reset</button> -->
+                    <button type="submit" class="btn btn-css btn-finish" data-dismiss="modal">Finish</button>
+                    <button type="submit" class="btn btn-secondary btn-cancel" data-dismiss="modal">Cancel</button>
+                </div>
+            
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal for button details -->
+        <div class="modal details" id="detailLight">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>State</h6>
+                        <input type="radio" name="onoffLight" value="Off" checked>Off&nbsp;
+                        <input type="radio" name="onoffLight" value="On">On&nbsp;
+                        <br><hr>
+                        <h6>Brightness</h6>
+                        <select name="bright" id="bright" style="width: 80px;">
+                            <option value="l1" selected>Level 1</option>
+                            <option value="l2">Level 2</option>
+                            <option value="l3">Level 3</option>
+                        </select>
+                        <br><hr>
+                        <h6>Light color</h6>
+                        <select name="colorpicker-fontawesome" id="light-color" style="width: 120px;">
+                            <option value="Yellow" selected>Yellow</option>
+                            <option value="Green">Green</option>
+                            <option value="Blue">Blue</option>
+                            <option value="White">White</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Red">Red</option>
+                            <option value="Purple">Purple</option>
+                            <option value="Gray">Gray</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal details" id="detailDoor">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="secure">Security</label>
+                        <select name="secure" class="custom-select-sm secure" id="secure">
+                            <option value="closed-locked" selected>Closed and Locked</option>
+                            <option value="opened">Open</option>
+                            <option value="closed-unlocked">Closed and Unlocked</option>
+                        </select>
+                    </div>
+                    <!-- <div class="modal-footer" style="height:50px;">
+                        <button type="button" class="btn btn-success btn-change" id="btn-change">Change</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="modal details" id="detailAir-conditional">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>State</h6>
+                        <input type="radio" name="onoffAir" value="off" checked>Off&nbsp;
+                        <input type="radio" name="onoffAir" value="on">On&nbsp;
+                        <br><hr>
+                        <h6>Temperature</h6>
+                        <div class="slidecontainer">
+                            <div id="slider" >
+                                <input type="range" min="0" max="40" value="26" class="slider" id="airRange">
+                                <p>Value: <span id="airVal"></span></p>
+                            </div>
+                            <!-- <div class='rsize'></div> -->
+                        </div>
+                        <script>
+                            var airRange = document.getElementById("airRange");
+                            var airVal = document.getElementById("airVal");
+                            airVal.innerHTML = airRange.value;
+
+                            airRange.oninput = function() {
+                                airVal.innerHTML = this.value;
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal details" id="detailHeaters">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>State</h6>
+                        <input type="radio" name="onoffHeat" value="off" checked>Off&nbsp;
+                        <input type="radio" name="onoffHeat" value="on">On&nbsp;
+                        <br><hr>
+                        <h6>Temperature</h6>
+                        <div class="slidecontainer1">
+                            <div id="slider" >
+                                <input type="range" min="0" max="40" value="26" class="slider" id="heatRange">
+                                <p>Value: <span id="heatVal"></span></p>
+                            </div>
+                        </div>
+                        <script>
+                            var heatRange = document.getElementById("heatRange");
+                            var heatVal = document.getElementById("heatVal");
+                            heatVal.innerHTML = heatRange.value;
+
+                            heatRange.oninput = function() {
+                                heatVal.innerHTML = this.value;
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal details" id="detailFan">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>State</h6>
+                        <div class="onoff">
+                            <input type="radio" name="strength_level" value="off" checked>Off<br>
+                            <input type="radio" name="strength_level" value="level1">Running on Level 1&nbsp;
+                            <input type="radio" name="strength_level" value="level2">Running on Level 2&nbsp;
+                            <input type="radio" name="strength_level" value="level3">Running on Level 3&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal details" id="detailFridge">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>State</h6>
+                        <input type="radio" name="onoffFridge" value="off" checked>Off&nbsp;
+                        <input type="radio" name="onoffFridge" value="on">On&nbsp;
+                        <br><hr>
+                        <h6>Temperature</h6>
+                        <div class="slidecontainer">
+                            <div id="slider" >
+                                <input type="range" min="-30" max="10" value="0" class="slider" id="fridgeRange">
+                                <p>Value: <span id="fridgeVal"></span></p>
+                            </div>
+                        </div>
+                        <script>
+                            var fridgeRange = document.getElementById("fridgeRange");
+                            var fridgeVal = document.getElementById("fridgeVal");
+                            fridgeVal.innerHTML = fridgeRange.value;
+
+                            fridgeRange.oninput = function() {
+                                fridgeVal.innerHTML = this.value;
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal details" id="detailWashing-machine">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Details</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <h6>Running state</h6>
+                            <input type="radio" name="state" value="off" checked>Off&nbsp;
+                            <input type="radio" name="state" value="on">On&nbsp;
+                            <input type="radio" name="state" value="pause">Pause&nbsp;
+                            <input type="radio" name="state" value="running">Running&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="modal details" id="detailCooker">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>State</h6>
+                        <input type="radio" name="mode" value="off" checked>Off&nbsp;<br>
+                        <h6>Mode</h6>
+                        <input type="radio" name="mode" value="cook" checked>Cook&nbsp;
+                        <input type="radio" name="mode" value="warm">Warm&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+            
+
+
+        
+
+</div>
+
+</body>
+</html>

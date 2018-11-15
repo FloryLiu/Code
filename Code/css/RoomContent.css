@@ -1,0 +1,139 @@
+.nav-device .nav-link{
+    border: 1px solid #d9d9d9;
+}
+/* not active */
+.nav-device .device1 .nav-link:not(.active) {
+    background-color: #f0f5f5;
+    color: black;
+}
+
+.nav-device .device2 .nav-link:not(.active) {
+    background-color: #f0f5f5;
+    color: black;
+}
+
+.nav-device .device3 .nav-link:not(.active) {
+    background-color: #f0f5f5;
+    color: black;
+}
+
+.nav-device .device4 .nav-link:not(.active) {
+    background-color: #f0f5f5;
+    color: black;
+}
+.nav-device .device5 .nav-link:not(.active) {
+    background-color: #f0f5f5;
+    color: black;
+}
+.nav-device .device6 .nav-link:not(.active) {
+    background-color: #f0f5f5;
+    color: black;
+}
+.nav-device .device7 .nav-link:not(.active) {
+    background-color: #f0f5f5;
+    color: black;
+}
+.nav-device .device8 .nav-link:not(.active) {
+    background-color: #f0f5f5;
+    color: black;
+}
+
+/* active (faded) */
+.nav-device .device1 .nav-link {
+    background-color: #339966;
+    color: white;
+}
+
+.nav-device .device2 .nav-link {
+    background-color: #339966;
+    color: white;
+}
+
+.nav-device .device3 .nav-link {
+    background-color: #339966;
+    color: white;
+}
+
+.nav-device .device4 .nav-link {
+    background-color: #339966;
+    color: white;
+}
+
+.nav-device .device5 .nav-link {
+    background-color: #339966;
+    color: white;
+}
+
+.nav-device .device6 .nav-link {
+    background-color: #339966;
+    color: white;
+}
+
+.nav-device .device7 .nav-link {
+    background-color: #339966;
+    color: white;
+}
+
+.nav-device .device8 .nav-link {
+    background-color: #339966;
+    color: white;
+}
+
+.slider .slider-selection{
+    background: #1a1a1a;
+}
+
+/* .tab-content{
+    width: 100%;
+    height: 100%;
+}
+
+.tab-pane{
+    background-color: #d9d9d9;
+} */
+
+.nameRoom{
+    margin-left: 15%;
+}
+
+/* table show the added devices */
+.table-device{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.table tbody tr:hover{
+    background-color: #c2d6d6;
+}
+
+
+/* collumns of table */
+.collumn{
+    background-color: #339966;
+    height: 50px;
+}
+
+/* css for button */
+.btn-css{
+    /* margin-right: 5px; */
+    background-color:#00cc66;
+    opacity: 0.9;
+}
+
+.btnadd{
+    margin: auto;
+    margin-bottom: 5px;
+    margin-left: 95%;
+}
+
+.mAdd{
+    width: 1200px;
+}
+
+.save{
+    margin-left: 86%;
+}
+
+.control{
+    margin-left: 80%;
+}

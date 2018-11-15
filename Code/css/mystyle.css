@@ -1,0 +1,42 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../Picture/smarthome1.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    /* background-position: center; */
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed;
+    /* position: relative; */
+}
+
+.container {
+    position: absolute;
+    height: auto;
+}
+
+h2 p{
+    margin: auto;
+}
+
+.menubar {
+    background-color:#339966;
+}
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

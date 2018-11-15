@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Control Device</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+  <link rel="stylesheet" type="text/css" href="css/RoomContent.css">
+  <link rel="stylesheet" type="text/css" href="css/status-device.css">
+  <script src="js/controlDevice.js"></script>
+  
+  
+</head>
+<body class="bg">
+    <nav class="menubar navbar sticky-top navbar-expand-sm navbar-dark menubar">
+        <a class="navbar-brand" href="index.html">SmartHome</a>
+        <ul class="navbar-nav ml-auto text-white">
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="index.html">Create home</a>
+            </li> -->
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="controlDevice.html">Control Device</a>
+            </li>  -->
+        </ul>
+    </nav>
+    <br><br><br>
+    <div class="title" style="margin-left:3%;"></div>
+    <div class="container col-lg-12">
+        <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-device">
+            <li class="nav-item device1">
+            <a class="nav-link active" data-toggle="tab" href="#Light">Light</a>
+            </li>
+            <li class="nav-item device2">
+            <a class="nav-link" data-toggle="tab" href="#Fridge">Fridge</a>
+            </li>
+            <li class="nav-item device3">
+            <a class="nav-link" data-toggle="tab" href="#Washing-machine">Washing-machine</a>
+            </li>
+            <li class="nav-item device4">
+            <a class="nav-link" data-toggle="tab" href="#Door">Door</a>
+            </li>
+            <li class="nav-item device5">
+            <a class="nav-link" data-toggle="tab" href="#Fan">Fan</a>
+            </li>
+            <li class="nav-item device6">
+            <a class="nav-link" data-toggle="tab" href="#Heaters">Heaters</a>
+            </li>
+            <li class="nav-item device7">
+            <a class="nav-link" data-toggle="tab" href="#Air-conditional">Air-conditional</a>
+            </li>
+            <li class="nav-item device8">
+            <a class="nav-link" data-toggle="tab" href="#Cooker">Cooker</a>
+            </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="Light" class="container tab-pane active"><br>
+            <!-- <button type="button" class="btn btn-css btnadd addLight" data-toggle="modal" data-target="#mLight">ADD</button> -->
+            <table class="table table-striped table-bordered viewLight">
+                <thead>
+                    <tr>
+                        <th class="id collumn">ID</th>
+                        <th class="name collumn">Device name</th>
+                        <th class="status collumn">Status</th>
+                        <th class="brightness collumn">Brightness</th>
+                        <th class="color collumn">Color</th>
+                        <th class="timer collumn">Timer</th>
+                        <th class="control collumn">Control</th>
+                    </tr>
+                </thead>
+                <tbody class="loadLight">
+                </tbody>
+            </table>
+            </div>
+            <div id="Fridge" class="container tab-pane fade"><br>
+            <button type="button" class="btn btn-css btnadd addFridge" data-toggle="modal" data-target="#mFridge">ADD</button>
+            <table class="table table-striped table-bordered viewFridge">
+                <thead>
+                    <tr>
+                        <th class="id collumn">ID</th>
+                        <th class="name collumn">Device name</th>
+                        <th class="status collumn">Status</th>
+                        <th class="compartment1 collumn">Ice compartment</th>
+                        <th class="compartment2 collumn">Cool compartment</th>
+                        <th class="compartment3 collumn">Vegetables compartment</th>
+                    </tr>
+                </thead>
+                <tbody class="loadFridge">
+                </tbody>
+            </table>
+            </div>
+            <div id="Washing-machine" class="container tab-pane fade"><br>
+            <button type="button" class="btn btn-css btnadd addWash" data-toggle="modal" data-target="#mWash">ADD</button>
+            <table class="table table-striped table-bordered viewWash">
+                <thead>
+                    <tr>
+                        <th class="id collumn">ID</th>
+                        <th class="name collumn">Device name</th>
+                        <th class="state collumn">State</th>
+                        <th class="brightness collumn">Brightness</th>
+                        <th class="color collumn">Color</th>
+                        <!-- <th class="adjust collumn">Edit</th> -->
+                        <!-- <th class="save collumn">Save</th> -->
+                    </tr>
+                </thead>
+                <tbody class="loadWash">
+                </tbody>
+            </table>
+            </div>
+            <div id="Door" class="container tab-pane fade"><br>
+            <button type="button" class="btn btn-css btnadd addDoor" data-toggle="modal" data-target="#mDoor">ADD</button>
+            <table class="table table-striped table-bordered viewDoor">
+                <thead>
+                    <tr>
+                        <th class="id collumn">ID</th>
+                        <th class="name collumn">Device name</th>
+                        <th class="state collumn">State</th>
+                        <th class="brightness collumn">Brightness</th>
+                        <th class="color collumn">Color</th>
+                        <!-- <th class="adjust collumn">Edit</th> -->
+                        <!-- <th class="save collumn">Save</th> -->
+                    </tr>
+                </thead>
+                <tbody class="loadDoor">
+                </tbody>
+            </table>
+            </div>
+            <div id="Fan" class="container tab-pane fade"><br>
+            <button type="button" class="btn btn-css btnadd addFan" data-toggle="modal" data-target="#mFan">ADD</button>
+            <table class="table table-striped table-bordered viewFan">
+                <thead>
+                    <tr>
+                        <th class="id collumn">ID</th>
+                        <th class="name collumn">Device name</th>
+                        <th class="state collumn">State</th>
+                        <th class="brightness collumn">Brightness</th>
+                        <th class="color collumn">Color</th>
+                        <!-- <th class="adjust collumn">Edit</th> -->
+                        <!-- <th class="save collumn">Save</th> -->
+                    </tr>
+                </thead>
+                <tbody class="loadFan">
+                </tbody>
+            </table>
+            </div>
+            <div id="Heaters" class="container tab-pane fade"><br>
+            <button type="button" class="btn btn-css btnadd addHeaters" data-toggle="modal" data-target="#mHeat">ADD</button>
+            <table class="table table-striped table-bordered viewHeat">
+                <thead>
+                    <tr>
+                        <th class="id collumn">ID</th>
+                        <th class="name collumn">Device name</th>
+                        <th class="status collumn">Status</th>
+                        <th class="temper collumn">Temperature</th>
+                        <!-- <th class="adjust collumn">Edit</th> -->
+                        <!-- <th class="save collumn">Save</th> -->
+                    </tr>
+                </thead>
+                <tbody class="loadHeat">
+                </tbody>
+            </table>
+            </div>
+            <div id="Air-conditional" class="container tab-pane fade"><br>
+            <button type="button" class="btn btn-css btnadd addAir" data-toggle="modal" data-target="#mAir">ADD</button>
+            <table class="table table-striped table-bordered viewAir">
+                <thead>
+                    <tr>
+                        <th class="id collumn">ID</th>
+                        <th class="name collumn">Device name</th>
+                        <th class="status collumn">Status</th>
+                        <th class="temper collumn">Temperature</th>
+                    </tr>
+                </thead>
+                <tbody class="loadAir">
+                </tbody>
+            </table>
+            </div>
+            <div id="Cooker" class="container tab-pane fade"><br>
+            <button type="button" class="btn btn-css btnadd addCooker" data-toggle="modal" data-target="#mCooker">ADD</button>
+            <table class="table table-striped table-bordered viewCooker">
+                <thead>
+                    <tr>
+                        <th class="id collumn">ID</th>
+                        <th class="name collumn">Device name</th>
+                        <th class="state collumn">State</th>
+                        <th class="brightness collumn">Brightness</th>
+                        <th class="color collumn">Color</th>
+                        <!-- <th class="adjust collumn">Edit</th> -->
+                        <!-- <th class="save collumn">Save</th> -->
+                    </tr>
+                </thead>
+                <tbody class="loadCooker">
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <!-- Modal add light -->
+        <div class="modal mAdd" id="mLight">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Control Light</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-bordered tableLight">
+                            <tbody class="tbodyLight">
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-css control controlLight">Apply Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal add fridge -->
+        <div class="modal mAdd" id="mFridge">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Fridge</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-bordered tableFridge">
+                            <tbody class="tbodyFridge">
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-css save saveFridge">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal add air conditional -->
+        <div class="modal mAdd" id="mAir">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Air</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-bordered tableAir">
+                            <tbody class="tbodyAir">
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-css save saveAir">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal add heaters -->
+        <div class="modal mAdd" id="mHeat">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Heaters</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-bordered tableHeat">
+                            <tbody class="tbodyHeat">
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-css save saveHeat">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal add fan -->
+        <div class="modal mAdd" id="mFan">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Fan</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-bordered tableFan">
+                            <tbody class="tbodyFan">
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-css save saveFan">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal add door -->
+        <div class="modal mAdd" id="mDoor">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Door</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-bordered tableDoor">
+                            <tbody class="tbodyDoor">
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-css save saveDoor">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal add washing machine -->
+        <div class="modal mAdd" id="mWash">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Washing machine</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-bordered tableWash">
+                            <tbody class="tbodyWash">
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-css save saveWash">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal add cooker -->
+        <div class="modal mAdd" id="mCooker">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Cooker</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-bordered tableCooker">
+                            <tbody class="tbodyCooker">
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-css save saveCooker">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

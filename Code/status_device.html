@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/simplecolorpicker.css">
+  <link rel="stylesheet" href="css/simplecolorpicker-regularfont.css">
+  <link rel="stylesheet" href="css/simplecolorpicker-glyphicons.css">
+  <link rel="stylesheet" href="css/simplecolorpicker-fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="css/status-device.css">
+</head>
+<body>
+
+<script>
+//  $(document).ready(function(){   
+//     $("input:checkbox").click(function() {
+//       $("input:text").attr("disabled", !this.checked); 
+//     });
+//   });
+
+
+  // $(this).closest('input').attr("disabled", !this.checked);
+  // var thisIndex = $(this).index('input:text');
+  // var next = thisIndex + 1;
+  // var nextElemId = $('input:text').eq(next).attr("disabled", !this.checked);
+</script>
+
+
+<input type="checkbox" id="defaultCheck" name="light"/>
+<input type="text" disabled="disabled"/>
+
+
+
+
+
+<!-- <input type="checkbox" name="others" class="medium" />
+<input type="text" disabled="disabled"/> -->
+
+
+
+
+<!-- disabled -->
+
+<!-- <div class="container">
+  <div class="jumbotron">
+    <div>
+      <h5>LIGHT</h5>
+      <div class="material-switch pull-right">
+          <input id="someSwitchOptionSuccess" name="onoff-switch" type="checkbox" readonly/>
+          <label for="someSwitchOptionSuccess" class="label-success"></label>
+      </div>&nbsp;
+      <h6>Brightness</h6>&nbsp;
+      <input type="radio" id="l1" name="level1">
+      <label for="l1">1</label>&nbsp;
+      <input type="radio" id="l2" name="level2">
+      <label for="l2">2</label>&nbsp;
+      <input type="radio" id="l3" name="level3">
+      <label for="l3">3</label>
+      <br><hr>
+      <h6>Light color</h6>&nbsp;
+      <select name="colorpicker-fontawesome" class="light-color" readonly>
+        <option value="#fbd75b" selected>Yellow</option>
+        <option value="#7bd148">Green</option>
+        <option value="#5484ed">Bold blue</option>
+        <option value="#a4bdfc">Blue</option>
+        <option value="#000000">White</option>
+        <option value="#7ae7bf">Light green</option>
+        <option value="#51b749">Bold green</option>
+        <option value="#dc2127">Bold red</option>
+        <option value="#ffb878">Orange</option>
+        <option value="#ff887c">Red</option>
+        <option value="#dbadff">Purple</option>
+        <option value="#e1e1e1">Gray</option>
+      </select>
+      
+    </div>
+    <div>
+      <h5>DOOR</h5>
+      <label for="secure">Security</label>
+      <select name="secure" class="custom-select-sm secure">
+        <option value="close" selected>Close</option>
+        <option value="open">Open</option>
+      </select>&nbsp;
+      <select name="secure" class="custom-select-sm secure">
+        <option value="lock" selected>Lock</option>
+        <option value="unlock">Unlock</option>
+      </select>
+      <br><hr>
+    </div>
+    <div>
+      <h5>FAN</h5>
+      <h6>Strength level</h6>
+      <input type="radio" id="defaultRadio" name="level1">
+      <label for="defaultRadio">1</label>&nbsp;
+      <input type="radio" id="defaultRadio" name="level2">
+      <label for="defaultRadio">2</label>&nbsp;
+      <input type="radio" id="defaultRadio" name="level3">
+      <label for="defaultRadio">3</label>
+      <br><hr>
+    </div>
+    <div>
+        <h5>FRIDGE</h5>
+        <h6>Temperature</h6>
+        <div id="slider"></div>
+        <div class='rsize'></div>
+        <br><hr>
+        <script>
+          $("#slider").slider({
+            min: -30,
+            max: 0,
+            step: 1,
+            slide: function(event, ui) {
+                $(".rsize").text((ui.value >18)?(ui.value-4)+'W':ui.value);
+          }
+          });
+        </script>
+      </div>
+    <div>
+        <h5>WASHING MACHINE</h5>
+        <h6>Running state</h6>
+        <input type="radio" id="defaultRadio" name="pause">
+        <label for="defaultRadio">Pause</label>&nbsp;
+        <input type="radio" id="defaultRadio" name="running">
+        <label for="defaultRadio">Running</label>
+        <br><hr>
+      </div>
+  </div>
+  <div>
+      <h5>Heaters</h5>
+      <h6>Temperature</h6>
+      <div id="slider"></div>
+      <div class='rsize'></div>
+      <br><hr>
+      <script>
+        $("#slider").slider({
+          min: 0,
+          max: 30,
+          step: 1,
+          slide: function(event, ui) {
+              $(".rsize").text((ui.value >18)?(ui.value-4)+'W':ui.value);
+        }
+        });
+      </script>
+    </div>
+    <div>
+        <h5>Air conditional</h5>
+        <h6>Temperature</h6>
+        <div id="slider"></div>
+        <div class='rsize'></div>
+        <br><hr>
+        <script>
+          $("#slider").slider({
+            min: 0,
+            max: 30,
+            step: 1,
+            slide: function(event, ui) {
+                $(".rsize").text((ui.value >18)?(ui.value-4)+'W':ui.value);
+          }
+          });
+        </script>
+      </div>
+      <div>
+          <h5>COOKER</h5>
+          <h6>Mode</h6>
+          <input type="radio" id="defaultRadio" name="cook">
+          <label for="defaultRadio">Cook</label>&nbsp;
+          <input type="radio" id="defaultRadio" name="warm">
+          <label for="defaultRadio">Warm</label>
+          <br><hr>
+        </div>
+</div> -->
+
+</body>
+</html>

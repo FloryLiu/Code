@@ -1,0 +1,164 @@
+/* .container {
+    position: absolute;
+    height: auto;
+}
+
+h2 p{
+    margin: auto;
+}
+
+.menubar {
+    background-color:#339966;
+}
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+} */
+
+/* css for button */
+.btn-css{
+    /* margin-right: 5px; */
+    background-color:#00cc66;
+    opacity: 0.9;
+}
+
+/* button add */
+.addDevice{
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 62px;
+    position: absolute;
+}
+
+/* button save changes */
+.saveroom{
+    margin-left: 75px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 142px;
+    position: absolute;
+}
+
+/* button close */
+.closeroom{
+    margin-left: 28%;
+    position: absolute;
+}
+
+/* table show the added devices */
+.table-device{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.table-device tbody tr:hover{
+    background-color: #b1e7b1;
+}
+
+
+/* collumns of table */
+.collumn{
+    background-color: #339966;
+    height: 50px;
+}
+
+.device-id{
+    width: 6%;
+}
+
+.device-name{
+    width: 20%;
+}
+
+.device-serial{
+    width: 3%;
+}
+
+.device-type{
+    width: 20%;
+}
+
+.device-status{
+    width: 36%;
+}
+
+.device-adjust{
+    width: 4%;
+}
+.device-delete{
+    /* width: 35px; */
+    width: 5%;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+/* modal for add button */
+.modalAdd{
+    width: auto;
+    height:auto;
+    margin-left: 70%;
+    position: fixed;
+}
+
+/* input Number Device */
+.number{
+    width: 63%;
+    position: absolute;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/* input Name Device */
+/* .belongto{
+    width: 2%;
+    position: fixed;
+    margin-bottom: 5px;
+} */
+
+/* button Reset */
+.btn-reset{
+    margin-left: 5%;
+}
+
+/* Temperature range */
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}

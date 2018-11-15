@@ -1,0 +1,36 @@
+.menubar {
+    background-color:#339966;
+}
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.info{
+    margin: auto;
+}
+/* Set a style for the submit button */
+.btn {
+    color: white;
+    padding: 5px 5px;
+    margin-top: 5px;
+    margin-right: 5px; 
+    border: none;
+    cursor: pointer;
+    width: auto;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.intoroom{
+    margin-top: 5px;
+    margin-right: 2px;
+    width: 40px;
+    height: 50px;
+}

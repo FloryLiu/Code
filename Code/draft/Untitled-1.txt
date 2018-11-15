@@ -1,0 +1,176 @@
+if(typeDevice == "Light" || typeDevice == "Heaters" || typeDevice == "Air Conditional"){
+			$("tbody").append(
+				"<tr>"
+					+ "<td>"
+						+ "<input class='nameDevice' type='text' name='nameDevice' placeholder='Enter the name of device'>"
+					+"</td>"
+					+ "<td class='td'>D"+count+"</td>"
+					+ "<td>"+typeDevice+"</td>"
+					+ "<td><button type='button' name='"+typeDevice+"' class='btn btn-css btn-details' data-toggle='modal' data-target='#detail"+typeDevice+"'>Details</button></td>"
+					+ "<td>"
+						+ "<a href='#' class='del'>Delete</a>"
+					+"</td>"
+				+ "</tr>"
+			)
+			$("tbody").append(
+				"<tr class='tr"+count+"'>"
+					+ "<td class='td'>"
+						+ "<input class='nameDevice' type='text' name='nameDevice' placeholder='Enter the name of device'>"
+					+"</td>"
+					+ "<td class='td'>D"+count+"</td>"
+					+ "<td>Smart switch</td>"
+					+ "<td>"+'<div class="material-switch pull-right">'
+						+'<input id="someSwitchOptionSuccess" name="onoff-switch" type="checkbox"/>'
+						+'<label for="someSwitchOptionSuccess" class="label-success"></label>'
+						+'</div>'
+					+"</td>"
+					+ "<td>"
+						+ "<a href='#' class='del'>Delete</a>"
+					+"</td>"
+				+ "</tr>"
+			)
+			// count++;
+		}
+		else if(typeDevice == "Door"){
+			$("tbody").append(
+				"<tr>"
+					+ "<td>"
+						+ "<input class='nameDevice' type='text' name='nameDevice' placeholder='Enter the name of device'>"
+					+"</td>"
+					+ "<td class='td'>D"+count+"</td>"
+					+ "<td>"+typeDevice+"</td>"
+					+ "<td><button type='button' name='"+typeDevice+"' class='btn btn-css btn-details' data-toggle='modal' data-target='#detail"+typeDevice+"'>Details</button></td>"
+					+ "<td>"
+						+ "<a href='#' class='del'>Delete</a>"
+					+"</td>"
+				+ "</tr>"
+			)
+			// count++;
+		}
+		else{
+			$("tbody").append(
+				"<tr>"
+					+ "<td>"
+						+ "<input class='nameDevice' type='text' name='nameDevice' placeholder='Enter the name of device'>"
+					+"</td>"
+					+ "<td class='td'>D"+count+"</td>"
+					+ "<td>"+typeDevice+"</td>"
+					+ "<td><button type='button' name='"+typeDevice+"' class='btn btn-css btn-details' data-toggle='modal' data-target='#detail"+typeDevice+"'>Details</button></td>"
+					+ "<td>"
+						+ "<a href='#' class='del'>Delete</a>"
+					+"</td>"
+				+ "</tr>"
+			)
+			$("tbody").append(
+				"<tr class='tr"+count+"'>"
+					+ "<td class='td'>"
+						+ "<input class='nameDevice' type='text' name='nameDevice' placeholder='Enter the name of device'>"
+					+"</td>"
+					+ "<td class='td'>D"+count+"</td>"
+					+ "<td>Smart socket</td>"
+					+ "<td>"+'<div class="material-switch pull-right">'
+						+'<input id="someSwitchOptionSuccess" name="onoff-switch" type="checkbox"/>'
+						+'<label for="someSwitchOptionSuccess" class="label-success"></label>'
+						+'</div>'
+					+"</td>"
+					+ "<td>"
+						+ "<a href='#' class='del'>Delete</a>"
+					+"</td>"
+				+ "</tr>"
+			)
+			// count++;
+		}
+		count++;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        switch(typeDevice){
+			case "Light":
+			$("tbody").append(
+				"<tr>"
+					+ "<td>"
+						+ "<input class='nameDevice' type='text' name='nameDevice' placeholder='Enter the name of device'>"
+					+"</td>"
+					+ "<td class='td'></td>"
+					+ "<td>"+typeDevice+"</td>"
+					+ "<td>Be Controled by Smart switch</td>"
+					+ "<td>"
+						+ "<a href='#' class='del'>Delete</a>"
+					+"</td>"
+				+ "</tr>"
+			)
+			$("tbody").append(
+				"<tr class='tr"+count+"'>"
+					+ "<td class='td'>"
+						+ "<p></p>"
+					+"</td>"
+					+ "<td class='td'>D"+count+"</td>"
+					+ "<td>Smart switch</td>"
+					+ "<td><button type='button' name='"+typeDevice+"' class='btn btn-css btn-details' data-toggle='modal' data-target='#detail"+typeDevice+"'>Details</button></td>"
+					+ "<td>"
+						+ "<a href='#' class='del'>Delete</a>"
+					+"</td>"
+				+ "</tr>"
+			)
+			count++;
+			break;
+			case "Door":
+			$("tbody").append(
+				"<tr>"
+					+ "<td>"
+						+ "<input class='nameDevice' type='text' name='nameDevice' placeholder='Enter the name of device'>"
+					+"</td>"
+					+ "<td class='td'></td>"
+					+ "<td>"+typeDevice+"</td>"
+					+ "<td><button type='button' name='"+typeDevice+"' class='btn btn-css btn-details' data-toggle='modal' data-target='#detail"+typeDevice+"'>Details</button></td>"
+					+ "<td>"
+						+ "<a href='#' class='del'>Delete</a>"
+					+"</td>"
+				+ "</tr>"
+			)
+			break;
+			case "Fan":
+			$("tbody").append(
+				"<tr>"
+					+ "<td>"
+						+ "<input class='nameDevice' type='text' name='nameDevice' placeholder='Enter the name of device'>"
+					+"</td>"
+					+ "<td class='td'></td>"
+					+ "<td>"+typeDevice+"</td>"
+					+ "<td>Be Controled by Smart socket</td>"
+					+ "<td>"
+						+ "<a href='#' class='del'>Delete</a>"
+					+"</td>"
+				+ "</tr>"
+			)
+			$("tbody").append(
+				"<tr class='tr"+count+"'>"
+					+ "<td class='td'>"
+						+ "<p></p>"
+					+"</td>"
+					+ "<td class='td'>D"+count+"</td>"
+					+ "<td>Smart socket</td>"
+					+ "<td><button type='button' name='"+typeDevice+"' class='btn btn-css btn-details' data-toggle='modal' data-target='#detail"+typeDevice+"'>Details</button></td>"
+					+ "<td>"
+						+ "<a href='#' class='del'>Delete</a>"
+					+"</td>"
+				+ "</tr>"
+			)
+			count++;
+			break;
+		$(".del").click(function(){
+			$(this).closest('tr').remove();
+			return false;
+		});
+		}
